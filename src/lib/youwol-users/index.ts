@@ -7,7 +7,7 @@ export async function install(installer: Installer): Promise<Installer> {
         fromLibraries: ['@youwol/installers-stories.basic'],
         fromManifests: [
             {
-                id: '@youwol-installers.visitors',
+                id: '@youwol/installers.youwol-users',
                 favorites: {
                     items: [
                         'MzlhYzBkYWItYTA3Mi00ZmEyLTk4YjgtN2I5OTY3YjZlYjQz', // stories YouWol

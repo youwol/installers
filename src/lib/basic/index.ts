@@ -10,7 +10,7 @@ export async function install(installer: Installer): Promise<Installer> {
     return installer.with({
         fromManifests: [
             {
-                id: '@youwol/installers-youwol.basic',
+                id: '@youwol/installers.basic',
                 applications: [
                     '@youwol/explorer',
                     '@youwol/cdn-explorer',
