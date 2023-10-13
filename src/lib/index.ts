@@ -10,6 +10,10 @@ export * as basic from './basic'
 
 import * as visitors from './visitors'
 
+/**
+ * This hard coded dictionary maps a group to its 'installer' package name.
+ * At some point, it will be obtained somehow through a request to a backend of YouWol.
+ */
 const groupsInstaller = {
     '/youwol-users': '@youwol/installers.youwolUsers',
     '/youwol-users/youwol-devs': '@youwol/installers.youwolDevs',
