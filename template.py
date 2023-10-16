@@ -32,7 +32,8 @@ template = Template(
         devTime={
             # The two dependencies below are required for typedoc to run properly
             "@types/lz-string": "^1.3.34",
-            "lz-string": "^1.4.4"
+            "lz-string": "^1.4.4",
+            "@youwol/os-widgets": "^0.1.0"
         }
     ),
     bundles=Bundles(

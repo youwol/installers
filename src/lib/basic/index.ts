@@ -1,12 +1,19 @@
 import { Installer, ExplorerState } from '@youwol/os-core'
 import { AssetsBackend, ExplorerBackend } from '@youwol/http-clients'
 import { uploadFile$ } from './asset-specific/upload-data'
-import { PackageInfoView } from './asset-specific'
-import { FileInfoView } from './asset-specific/file-info.view'
-export * from './asset-specific'
+import * as cdnClient from '@youwol/cdn-client'
+import type * as osWidgetsModule from '@youwol/os-widgets'
+
+async function installOsWidgets() {
+    return cdnClient.install({
+        modules: ['@youwol/os-widgets'],
+        aliases: {
+            osWidgets: '@youwol/os-widgets',
+        },
+    }) as unknown as Promise<{ osWidgets: typeof osWidgetsModule }> // need os-widgets to be published
+}
 
 export async function install(installer: Installer): Promise<Installer> {
-    console.log('Basic installer!!!')
     return installer.with({
         fromManifests: [
             {
@@ -32,7 +39,13 @@ export async function install(installer: Installer): Promise<Installer> {
                             icon: 'fas fa-info',
                             name: 'Package info',
                             exe: () => {
-                                return new PackageInfoView({ asset })
+                                return installOsWidgets().then(
+                                    ({ osWidgets }) => {
+                                        return osWidgets.webpmPackageInfoWidget(
+                                            { asset },
+                                        )
+                                    },
+                                )
                             },
                             applicable: () => {
                                 return asset.kind == 'package'
@@ -42,7 +55,14 @@ export async function install(installer: Installer): Promise<Installer> {
                             icon: 'fas fa-info',
                             name: 'File info',
                             exe: () => {
-                                return new FileInfoView({ asset, permissions })
+                                return installOsWidgets().then(
+                                    ({ osWidgets }) => {
+                                        return osWidgets.fileInfoWidget({
+                                            asset,
+                                            permissions,
+                                        })
+                                    },
+                                )
                             },
                             applicable: () => {
                                 return asset.kind == 'data'
