@@ -1122,6 +1122,15 @@
   dependencies:
     semver "^7.3.4"
 
+"@youwol/cdn-client@^2.0.4":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@youwol/cdn-client/-/cdn-client-2.1.0.tgz#a64261fcfb693f220542d5f69ab0e4f3051f404c"
+  integrity sha512-T13Pzio8adU0eWJwiuWeKOiZu9rOsScwbJwVSqyyrGZbT1jWqPc0H/PHCgwit9Eum2hiHpYZCu3tkHo01zyBFw==
+  dependencies:
+    "@youwol/flux-view" "^1.1.0"
+    rxjs "^6.5.5"
+    semver "^7.3.4"
+
 "@youwol/cdn-client@^2.0.6":
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/@youwol/cdn-client/-/cdn-client-2.0.6.tgz#9703e0ac6a4bb7adbc780c259ce70bc4e34f6ba0"
@@ -1152,6 +1161,14 @@
   integrity sha512-/EWXYnRRpRI5BMu9IRcwqPJmlf9MZQMS6FaRp3yCzr9RAxhuAbvSZUDN18OJGg3hUvUtRTmQOUWtfQaVypH8Tg==
   dependencies:
     "@ungap/custom-elements" "1.2.0"
+    rxjs "^6.5.5"
+
+"@youwol/fv-group@^0.2.3":
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/@youwol/fv-group/-/fv-group-0.2.3.tgz#d2f5594f7477ec9d987b599992830368a2ae388e"
+  integrity sha512-N6OphExW0EEHr7MnYfYanzFNZMV4mX4tpUtqTUH71D/jEaNtDh1GfZyAg6KYICaukBcUOiIXTVMHq+DIeZ+bXA==
+  dependencies:
+    "@youwol/flux-view" "^1.0.3"
     rxjs "^6.5.5"
 
 "@youwol/fv-input@^0.2.1":
@@ -1199,6 +1216,20 @@
     "@youwol/http-primitives" "^0.1.2"
     rxjs "^6.5.5"
     uuid "^8.3.2"
+
+"@youwol/os-widgets@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@youwol/os-widgets/-/os-widgets-0.1.0.tgz#b7c80e1bf4187b5e77943cd4bd48dadac6052ad0"
+  integrity sha512-whgs6Kis5h+DQSnIHjrIO8co0knrA069LcotVmWscESmaHuh9p8OjpaC4tM4b9OaShilMd0P3IgljIi/8JLX5Q==
+  dependencies:
+    "@youwol/cdn-client" "^2.0.4"
+    "@youwol/flux-view" "^1.0.3"
+    "@youwol/fv-group" "^0.2.3"
+    "@youwol/fv-input" "^0.2.1"
+    "@youwol/http-clients" "^2.0.5"
+    "@youwol/http-primitives" "^0.1.2"
+    "@youwol/os-core" "^0.1.12"
+    rxjs "^6.5.5"
 
 "@youwol/prettier-config@^0.1.0":
   version "0.1.0"
