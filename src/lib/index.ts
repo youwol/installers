@@ -39,7 +39,6 @@ export async function install(installer: Installer): Promise<Installer> {
     )
     return new Promise((resolve) => {
         installer$.subscribe((installer) => {
-            console.log('Installer', installer)
             resolve(installer)
         })
     })
