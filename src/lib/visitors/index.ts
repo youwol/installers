@@ -12,6 +12,12 @@ export async function install(installer: Installer): Promise<Installer> {
                     items: [
                         'MzlhYzBkYWItYTA3Mi00ZmEyLTk4YjgtN2I5OTY3YjZlYjQz', // stories YouWol
                     ],
+                    applications: [
+                        // Ids are the name of the application (e.g. '@youwol/galapagos')  encoded b64 2 times
+                        'UUhsdmRYZHZiQzluWVd4aGNHRm5iM009', // '@youwol/galapagos'
+                        'UUhsdmRYZHZiQzl6Y0dGdWFYTm9MWEJsWVd0eg==', // '@youwol/spanish-peaks'
+                        'UUhsdmRYZHZiQzlpZFc1dWVTMXlaVzFsYzJnPQ==', // '@youwol/bunny-remesh'
+                    ],
                 },
             },
         ],

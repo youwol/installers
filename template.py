@@ -20,7 +20,7 @@ template = Template(
     dependencies=Dependencies(
         runTime=RunTimeDeps(
             externals={
-                "@youwol/os-core": "^0.1.12",
+                "@youwol/os-core": "^0.1.13",
                 "@youwol/http-clients": "^2.0.5",
                 "@youwol/http-primitives": "^0.1.2",
                 "rxjs": "^6.5.5",
@@ -30,8 +30,6 @@ template = Template(
             }
         ),
         devTime={
-            # The two dependencies below are required for typedoc to run properly
-            "@types/lz-string": "^1.3.34",
             "lz-string": "^1.4.4",
             "@youwol/os-widgets": "^0.1.0"
         }

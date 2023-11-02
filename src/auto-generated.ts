@@ -1,7 +1,7 @@
 
 const runTimeDependencies = {
     "externals": {
-        "@youwol/os-core": "^0.1.12",
+        "@youwol/os-core": "^0.1.13",
         "@youwol/http-clients": "^2.0.5",
         "@youwol/http-primitives": "^0.1.2",
         "rxjs": "^6.5.5",
@@ -97,7 +97,7 @@ const entries = {
 export const setup = {
     name:'@youwol/installers',
         assetId:'QHlvdXdvbC9pbnN0YWxsZXJz',
-    version:'0.1.0-wip',
+    version:'0.1.0',
     shortDescription:"",
     developerDocumentation:'https://platform.youwol.com/applications/@youwol/cdn-explorer/latest?package=@youwol/installers&tab=doc',
     npmPackage:'https://www.npmjs.com/package/@youwol/installers',
@@ -143,7 +143,7 @@ export const setup = {
         const parameters = installParameters || {}
         const scripts = [
             ...(parameters.scripts || []),
-            `@youwol/installers#0.1.0-wip~dist/@youwol/installers/${entry.name}.js`
+            `@youwol/installers#0.1.0~dist/@youwol/installers/${entry.name}.js`
         ]
         const modules = [
             ...(parameters.modules || []),
