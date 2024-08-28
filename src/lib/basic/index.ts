@@ -1,12 +1,14 @@
 import { Installer, ExplorerState } from '@youwol/os-core'
 import { AssetsBackend, ExplorerBackend } from '@youwol/http-clients'
 import { uploadFile$ } from './asset-specific/upload-data'
-import * as cdnClient from '@youwol/cdn-client'
+import * as webpmClient from '@youwol/webpm-client'
 import type * as osWidgetsModule from '@youwol/os-widgets'
+import { setup } from '../../auto-generated'
 
 async function installOsWidgets() {
-    return cdnClient.install({
-        modules: ['@youwol/os-widgets'],
+    const version = setup.runTimeDependencies.externals['@youwol/os-widgets']
+    return webpmClient.install({
+        modules: [`@youwol/os-widgets#${version}`],
         aliases: {
             osWidgets: '@youwol/os-widgets',
         },
@@ -82,7 +84,7 @@ export async function install(installer: Installer): Promise<Installer> {
                     return [
                         {
                             name: 'Import data',
-                            icon: { class: 'fas fa-file-import' },
+                            icon: { tag: 'div', class: 'fas fa-file-import' },
                             enabled: () => true,
                             exe: async () => {
                                 const input = document.createElement('input')
