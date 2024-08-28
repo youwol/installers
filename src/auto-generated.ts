@@ -97,7 +97,7 @@ const entries = {
 export const setup = {
     name:'@youwol/installers',
         assetId:'QHlvdXdvbC9pbnN0YWxsZXJz',
-    version:'0.1.1-wip',
+    version:'0.1.1',
     shortDescription:"Gathers YouWol installers",
     developerDocumentation:'https://platform.youwol.com/applications/@youwol/cdn-explorer/latest?package=@youwol/installers&tab=doc',
     npmPackage:'https://www.npmjs.com/package/@youwol/installers',
@@ -143,7 +143,7 @@ export const setup = {
         const parameters = installParameters || {}
         const scripts = [
             ...(parameters.scripts || []),
-            `@youwol/installers#0.1.1-wip~dist/@youwol/installers/${entry.name}.js`
+            `@youwol/installers#0.1.1~dist/@youwol/installers/${entry.name}.js`
         ]
         const modules = [
             ...(parameters.modules || []),
