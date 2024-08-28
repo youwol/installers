@@ -1,79 +1,79 @@
 
 const runTimeDependencies = {
     "externals": {
-        "@youwol/os-core": "^0.1.13",
-        "@youwol/http-clients": "^2.0.5",
-        "@youwol/http-primitives": "^0.1.2",
-        "rxjs": "^6.5.5",
-        "@youwol/cdn-client": "^2.0.6",
-        "@youwol/fv-input": "^0.2.1"
+        "@youwol/http-clients": "^3.0.1",
+        "@youwol/http-primitives": "^0.2.5",
+        "@youwol/os-core": "^0.2.1",
+        "@youwol/os-widgets": "^0.2.6",
+        "@youwol/webpm-client": "^3.0.7",
+        "rxjs": "^7.5.6"
     },
     "includedInBundle": {}
 }
 const externals = {
-    "@youwol/os-core": {
-        "commonjs": "@youwol/os-core",
-        "commonjs2": "@youwol/os-core",
-        "root": "@youwol/os-core_APIv01"
-    },
     "@youwol/http-clients": {
         "commonjs": "@youwol/http-clients",
         "commonjs2": "@youwol/http-clients",
-        "root": "@youwol/http-clients_APIv2"
+        "root": "@youwol/http-clients_APIv3"
     },
     "@youwol/http-primitives": {
         "commonjs": "@youwol/http-primitives",
         "commonjs2": "@youwol/http-primitives",
-        "root": "@youwol/http-primitives_APIv01"
+        "root": "@youwol/http-primitives_APIv02"
+    },
+    "@youwol/os-core": {
+        "commonjs": "@youwol/os-core",
+        "commonjs2": "@youwol/os-core",
+        "root": "@youwol/os-core_APIv02"
+    },
+    "@youwol/os-widgets": {
+        "commonjs": "@youwol/os-widgets",
+        "commonjs2": "@youwol/os-widgets",
+        "root": "@youwol/os-widgets_APIv02"
+    },
+    "@youwol/webpm-client": {
+        "commonjs": "@youwol/webpm-client",
+        "commonjs2": "@youwol/webpm-client",
+        "root": "@youwol/webpm-client_APIv3"
     },
     "rxjs": {
         "commonjs": "rxjs",
         "commonjs2": "rxjs",
-        "root": "rxjs_APIv6"
-    },
-    "@youwol/cdn-client": {
-        "commonjs": "@youwol/cdn-client",
-        "commonjs2": "@youwol/cdn-client",
-        "root": "@youwol/cdn-client_APIv2"
-    },
-    "@youwol/fv-input": {
-        "commonjs": "@youwol/fv-input",
-        "commonjs2": "@youwol/fv-input",
-        "root": "@youwol/fv-input_APIv02"
+        "root": "rxjs_APIv7"
     },
     "rxjs/operators": {
         "commonjs": "rxjs/operators",
         "commonjs2": "rxjs/operators",
         "root": [
-            "rxjs_APIv6",
+            "rxjs_APIv7",
             "operators"
         ]
     }
 }
 const exportedSymbols = {
-    "@youwol/os-core": {
-        "apiKey": "01",
-        "exportedSymbol": "@youwol/os-core"
-    },
     "@youwol/http-clients": {
-        "apiKey": "2",
+        "apiKey": "3",
         "exportedSymbol": "@youwol/http-clients"
     },
     "@youwol/http-primitives": {
-        "apiKey": "01",
+        "apiKey": "02",
         "exportedSymbol": "@youwol/http-primitives"
     },
-    "rxjs": {
-        "apiKey": "6",
-        "exportedSymbol": "rxjs"
-    },
-    "@youwol/cdn-client": {
-        "apiKey": "2",
-        "exportedSymbol": "@youwol/cdn-client"
-    },
-    "@youwol/fv-input": {
+    "@youwol/os-core": {
         "apiKey": "02",
-        "exportedSymbol": "@youwol/fv-input"
+        "exportedSymbol": "@youwol/os-core"
+    },
+    "@youwol/os-widgets": {
+        "apiKey": "02",
+        "exportedSymbol": "@youwol/os-widgets"
+    },
+    "@youwol/webpm-client": {
+        "apiKey": "3",
+        "exportedSymbol": "@youwol/webpm-client"
+    },
+    "rxjs": {
+        "apiKey": "7",
+        "exportedSymbol": "rxjs"
     }
 }
 
@@ -84,7 +84,7 @@ const mainEntry : {entryFile: string,loadDependencies:string[]} = {
         "@youwol/http-clients",
         "@youwol/http-primitives",
         "rxjs",
-        "@youwol/cdn-client"
+        "@youwol/webpm-client"
     ]
 }
 
@@ -97,8 +97,8 @@ const entries = {
 export const setup = {
     name:'@youwol/installers',
         assetId:'QHlvdXdvbC9pbnN0YWxsZXJz',
-    version:'0.1.0',
-    shortDescription:"",
+    version:'0.1.1-wip',
+    shortDescription:"Gathers YouWol installers",
     developerDocumentation:'https://platform.youwol.com/applications/@youwol/cdn-explorer/latest?package=@youwol/installers&tab=doc',
     npmPackage:'https://www.npmjs.com/package/@youwol/installers',
     sourceGithub:'https://github.com/youwol/installers',
@@ -143,7 +143,7 @@ export const setup = {
         const parameters = installParameters || {}
         const scripts = [
             ...(parameters.scripts || []),
-            `@youwol/installers#0.1.0~dist/@youwol/installers/${entry.name}.js`
+            `@youwol/installers#0.1.1-wip~dist/@youwol/installers/${entry.name}.js`
         ]
         const modules = [
             ...(parameters.modules || []),
