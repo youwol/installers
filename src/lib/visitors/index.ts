@@ -9,9 +9,7 @@ export async function install(installer: Installer): Promise<Installer> {
             {
                 id: '@youwol/installers.visitors',
                 favorites: {
-                    items: [
-                        'MzlhYzBkYWItYTA3Mi00ZmEyLTk4YjgtN2I5OTY3YjZlYjQz', // stories YouWol
-                    ],
+                    items: [],
                     applications: [
                         // Ids are the name of the application (e.g. '@youwol/galapagos')  encoded b64 2 times
                         'UUhsdmRYZHZiQzluWVd4aGNHRm5iM009', // '@youwol/galapagos'

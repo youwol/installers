@@ -12,7 +12,7 @@ pkg_json = parse_json(folder_path / 'package.json')
 
 template = Template(
     path=folder_path,
-    type=PackageType.Library,
+    type=PackageType.LIBRARY,
     name=pkg_json['name'],
     version=pkg_json['version'],
     shortDescription=pkg_json['description'],
@@ -20,18 +20,17 @@ template = Template(
     dependencies=Dependencies(
         runTime=RunTimeDeps(
             externals={
-                "@youwol/os-core": "^0.1.13",
-                "@youwol/http-clients": "^2.0.5",
-                "@youwol/http-primitives": "^0.1.2",
-                "rxjs": "^6.5.5",
-                "@youwol/cdn-client": "^2.0.6",
-                # fv-input is fetched in due time when needed, not part of a 'loadDependencies'
-                "@youwol/fv-input": "^0.2.1",
+                "@youwol/os-core": "^0.2.1",
+                "@youwol/http-clients": "^3.0.1",
+                "@youwol/http-primitives": "^0.2.5",
+                "rxjs": "^7.5.6",
+                "@youwol/webpm-client": "^3.0.7",
+                # Fetched at run time
+                "@youwol/os-widgets": "^0.2.6"
             }
         ),
         devTime={
             "lz-string": "^1.4.4",
-            "@youwol/os-widgets": "^0.1.0"
         }
     ),
     bundles=Bundles(
@@ -42,7 +41,7 @@ template = Template(
                 "@youwol/http-clients",
                 "@youwol/http-primitives",
                 "rxjs",
-                "@youwol/cdn-client",
+                "@youwol/webpm-client",
             ]
         )
     ),

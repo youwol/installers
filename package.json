@@ -1,8 +1,8 @@
 {
     "name": "@youwol/installers",
-    "description": "",
-    "version": "0.1.0",
-    "author": null,
+    "description": "Gathers YouWol installers",
+    "version": "0.1.2-wip",
+    "author": "greinisch@youwol.com",
     "homepage": "https://github.com/youwol/installers#README.md",
     "main": "dist/@youwol/installers.js",
     "types": "src/index.ts",
@@ -28,40 +28,40 @@
         ]
     },
     "dependencies": {
-        "@youwol/os-core": "^0.1.13",
-        "@youwol/http-clients": "^2.0.5",
-        "@youwol/http-primitives": "^0.1.2",
-        "rxjs": "^6.5.5",
-        "@youwol/cdn-client": "^2.0.6",
-        "@youwol/fv-input": "^0.2.1"
+        "@youwol/os-core": "^0.2.1",
+        "@youwol/http-clients": "^3.0.1",
+        "@youwol/http-primitives": "^0.2.5",
+        "rxjs": "^7.5.6",
+        "@youwol/webpm-client": "^3.0.7",
+        "@youwol/os-widgets": "^0.2.6"
     },
     "devDependencies": {
-        "lz-string": "^1.4.4",
-        "@youwol/os-widgets": "^0.1.0",
         "@types/jest": "^29.5.6",
-        "@types/node": "^18.9.1",
+        "@types/node": "^20.11.19",
         "@types/webpack": "^5.28.0",
-        "@youwol/eslint-config": "1.0.0",
-        "@youwol/jest-preset": "1.0.0",
-        "@youwol/prettier-config": "1.0.0",
-        "@youwol/tsconfig": "1.0.0",
+        "@youwol/eslint-config": "^1.2.1",
+        "@youwol/jest-preset": "^1.2.1",
+        "@youwol/prettier-config": "^1.2.1",
+        "@youwol/tsconfig": "^1.2.1",
         "del-cli": "^5.1.0",
         "isomorphic-fetch": "^3.0.0",
-        "ts-loader": "^9.5.0",
-        "ts-node": "^10.9.1",
-        "typedoc": "^0.25.2",
-        "typescript": "^5.2.2",
+        "ts-loader": "9.5.0",
+        "ts-node": "10.9.2",
+        "tsx": "4.7.1",
+        "typedoc": "^0.25.7",
+        "typescript": "5.3.3",
         "webpack": "^5.89.0",
         "webpack-bundle-analyzer": "^4.9.1",
-        "webpack-cli": "5.1.4"
+        "webpack-cli": "5.1.4",
+        "lz-string": "^1.4.4"
     },
     "webpm": {
         "dependencies": {
-            "@youwol/os-core": "^0.1.13",
-            "@youwol/http-clients": "^2.0.5",
-            "@youwol/http-primitives": "^0.1.2",
-            "rxjs": "^6.5.5",
-            "@youwol/cdn-client": "^2.0.6"
+            "@youwol/os-core": "^0.2.1",
+            "@youwol/http-clients": "^3.0.1",
+            "@youwol/http-primitives": "^0.2.5",
+            "rxjs": "^7.5.6",
+            "@youwol/webpm-client": "^3.0.7"
         },
         "aliases": []
     }
